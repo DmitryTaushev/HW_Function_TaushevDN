@@ -3,3 +3,21 @@
 # качестве параметров. Если границы диапазона перепутаны
 # (например, 5 - верхняя граница; 25 - нижняя граница), их нужно
 # поменять местами.
+
+def multip_number(a,b):
+    num = 1
+    if a > b:
+        print("Диапазон введен неверно, поменяли границы местами")
+        for number in range(b , a+1):
+            num *= number
+        print(num)
+    elif b>a:
+        print("Диапазон введен верно")
+        for number in range(a , b+1):
+            num *= number
+        print(num)
+
+a = int(input("Введите начало диапазона"))
+b = int(input("Введите конец диапазона"))
+
+multip_number(a,b)
