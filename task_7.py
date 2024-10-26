@@ -8,24 +8,15 @@
 # не палиндром.
 
 def palindrom(number):
-
-    if len(str(number)) % 2 != 0:
-        print("Число определенно не палиндром")
-    number_str = str(number)
-
-    count = len(number_str)
-    number_list = list(number_str)
-
-    count_1 = int(count / 2)
-    number_slice_1 = number_list[count_1:count]
-
-    number_1 = ''.join(number_list[0:count_1])
-    number_2 = ''.join(number_slice_1[::-1])
-
-    if number_1 == number_2:
-        print("Число палиндром")
+    str_number = str(number)
+    if str_number == str_number[::-1]:
+        print('Число палиндром')
     else:
-        print("Число не палиндром")
-
+        print('Число не палиндром')
 number = int(input("Введите число"))
 palindrom(number)
+
+# В условии написано что "«Палиндром» — это число, у которого первая часть цифр равна
+# второй перевернутой части цифр." но на деле Палиндром это когда число или слово наоборот прочитанное
+# не изменятся. По логике условия тогда число должно иметь четное количество цифр,
+# что не верно, ведь 10101 тоже палиндром, но тут нет не половин...
