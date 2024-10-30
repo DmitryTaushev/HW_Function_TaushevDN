@@ -5,10 +5,8 @@
 # если она равна True, квадрат заполненный;
 # если False, квадрат пустой.
 
-def pic_square():
-    len = int(input("Введите длину стороны квадрата"))
-    symbol = input('Введите символ из которого будет состоять квадрат')
-    condition = input("Введите True - если квадрат должен быть заполненым, False, если пустым")
+def pic_square(lenght, symbol, condition):
+
     space = ' '
     if condition == "True":
         for i in range(len):
@@ -19,6 +17,9 @@ def pic_square():
             print(symbol + space*(len-2) + symbol)
         print(len * symbol)
 
-pic_square()
+len = int(input("Введите длину стороны квадрата"))
+symbol = input('Введите символ из которого будет состоять квадрат')
+condition = input("Введите True - если квадрат должен быть заполненым, False, если пустым")
+pic_square(len,symbol,condition)
 
 
